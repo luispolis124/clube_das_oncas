@@ -11,23 +11,13 @@
     <img src="assets/imagens/logo.png" alt="Clube das Onças" class="logo" />
   </header>
 
-  <main>
-    <section class="menu">
-      <h1>Bem-vindo ao Clube das Onças</h1>
-      <button onclick="entrarJogo()">Entrar no Jogo</button>
-    </section>
-
-    <section id="jogo" class="jogo hidden">
-      <canvas id="gameCanvas"></canvas>
-      <div id="controles-mobile" class="mobile-controls">
-        <button onclick="mover('esquerda')">⬅️</button>
-        <button onclick="mover('cima')">⬆️</button>
-        <button onclick="mover('baixo')">⬇️</button>
-        <button onclick="mover('direita')">➡️</button>
-      </div>
-    </section>
+  <main class="menu">
+    <h1>Bem-vindo ao Clube das Onças</h1>
+    <p>Entre com sua conta ou registre-se para começar a jogar!</p>
+    <div class="botoes">
+      <a href="login.html"><button>Entrar</button></a>
+      <a href="registro.html"><button>Registrar</button></a>
+    </div>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>

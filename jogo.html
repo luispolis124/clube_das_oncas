@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clube das Onças - Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/imagens/logo.png" class="logo" alt="Logo do Clube das Onças">
+    <button onclick="sair()">Sair</button>
+  </header>
+
+  <main>
+    <canvas id="gameCanvas"></canvas>
+    <section id="chat">
+      <div id="mensagens"></div>
+      <input type="text" id="msgInput" placeholder="Digite uma mensagem" onkeydown="if(event.key==='Enter'){enviarMensagem()}" />
+    </section>
+    <nav>
+      <a href="mapa1.html">Mapa 1</a>
+      <a href="casajogador.html">Minha Casa</a>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="chat.js"></script>
+  <script>
+    if (!localStorage.getItem('usuarioLogado')) {
+      alert("Você precisa estar logado!");
+      window.location.href = "login.html";
+    }
+    function sair() {
+      localStorage.removeItem('usuarioLogado');
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
