@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clube das Onças</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/imagens/logo.png" alt="Clube das Onças" class="logo" />
+  </header>
+
+  <main>
+    <section class="menu">
+      <h1>Bem-vindo ao Clube das Onças</h1>
+      <button onclick="entrarJogo()">Entrar no Jogo</button>
+    </section>
+
+    <section id="jogo" class="jogo hidden">
+      <canvas id="gameCanvas"></canvas>
+      <div id="controles-mobile" class="mobile-controls">
+        <button onclick="mover('esquerda')">⬅️</button>
+        <button onclick="mover('cima')">⬆️</button>
+        <button onclick="mover('baixo')">⬇️</button>
+        <button onclick="mover('direita')">➡️</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
